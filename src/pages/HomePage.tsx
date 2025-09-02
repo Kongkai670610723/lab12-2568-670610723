@@ -1,3 +1,4 @@
+// HomePage.tsx
 import { useState } from "react";
 import {
   Container,
@@ -134,25 +135,6 @@ export default function HomePage() {
                     {/* ใช้ไอคอนถังขยะจาก tabler icons */}
                     <IconTrash style={{width: "70%",height: "70%"}} stroke={1.5}  />
                   </ActionIcon>
-                  {/*<Button
-                    style={{
-                      backgroundColor: "#71c32fda",
-                      color: "#dce6e7ff",
-                    }}
-                    variant="light"
-                    size="xs"
-                    onClick={() => toggleDoneTask(task.id)}
-                  >
-                    Done
-                  </Button>*/}
-                  {/*<Button
-                    color="chanadda"
-                    variant="light"
-                    size="xs"
-                    onClick={() => deleteTask(task.id)}
-                  >
-                    Delete
-                  </Button>*/}
                 </Group>
               </Group>
             </Card>

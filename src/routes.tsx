@@ -1,3 +1,4 @@
+// routes.tsx
 import { createBrowserRouter } from "react-router";
 import MainLayout from "./layout/MainLayout";
 import ErrorPage from "./pages/ErrorPage";

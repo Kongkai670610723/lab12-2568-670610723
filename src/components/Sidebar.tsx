@@ -1,3 +1,4 @@
+// Sidebar.tsx
 import { NavLink as RouterNavLink } from "react-router-dom";
 
 import {
@@ -46,14 +47,16 @@ export default function Sidebar({ userName, type }: SidebarComponentProps) {
       </Box>
       {/* แสดงผู้ใช้งาน */}
       <Group gap="1">
+        {/*ทำการแสดงสถานะออนไลน์*/}
         <Indicator
           inline
           size={12}
           offset={7}
           position="bottom-end"
           color="cyan"
-          withBorder
->
+          withBorder> 
+
+          {/*แสดงรูปภาพผู้ใช้งาน*/}
           <Avatar
             size="md"
             radius="xl"
@@ -62,11 +65,12 @@ export default function Sidebar({ userName, type }: SidebarComponentProps) {
             style={{ marginLeft: 15 }}
           />
         </Indicator>
-          <Box p={20}>
-        <Text fw={600}>User : { userName } : {type}</Text>
-          </Box>
+
+        {/*แสดงชื่อผู้ใช้งาน*/}
+        <Box p={20}>
+          <Text fw={600}>User : { userName } : {type}</Text>
+        </Box>
       </Group>
-      
     </Stack>
   );
 }

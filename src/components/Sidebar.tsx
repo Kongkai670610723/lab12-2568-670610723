@@ -1,4 +1,5 @@
 import { NavLink as RouterNavLink } from "react-router-dom";
+
 import {
   NavLink,
   Stack,
@@ -8,12 +9,14 @@ import {
   Text,
   Group,
 } from "@mantine/core";
+
 interface SidebarComponentProps  {
   userName: string;
   type?: "admin" |"student";
 }
-export type { SidebarProps };
-export default function Sidebar() {
+
+export type { SidebarComponentProps };
+export default function Sidebar({ userName, type }: SidebarComponentProps) {
   return (
     <Stack
       align="stretch"
@@ -42,9 +45,28 @@ export default function Sidebar() {
         </Text> */}
       </Box>
       {/* แสดงผู้ใช้งาน */}
-      <Box p={10}>
-        <Text>chanadda</Text>
-      </Box>
+      <Group gap="1">
+        <Indicator
+          inline
+          size={12}
+          offset={7}
+          position="bottom-end"
+          color="cyan"
+          withBorder
+>
+          <Avatar
+            size="md"
+            radius="xl"
+            src="/Phurin.png"
+            alt="it's me"
+            style={{ marginLeft: 15 }}
+          />
+        </Indicator>
+          <Box p={20}>
+        <Text fw={600}>User : { userName } : {type}</Text>
+          </Box>
+      </Group>
+      
     </Stack>
   );
 }
